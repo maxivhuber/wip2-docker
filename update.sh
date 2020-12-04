@@ -28,7 +28,7 @@ git commit -m ${PATCH} -q
 read -p "Push changes automatically? [y/n]" -n 1 -r
 printf "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    git push
+    git push -q
 else
     printf "pls push your changes manually\n"
     exit

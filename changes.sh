@@ -136,8 +136,8 @@ clone () {
         mkdir -p $HOME/.patch/$REPOSITORY
         git init $HOME/.patch/$REPOSITORY -q
         cd $HOME/.patch/$REPOSITORY
-        git config user.email $MAIL
-        git config user.name $USER
+        git config --global user.email $MAIL
+        git config --global user.name $USER
         git config credential.helper store
         touch $HOME/.git-credentials
         AUTH="https://${USER}:${PW}@github.com"
