@@ -1,6 +1,7 @@
 #!/bin/bash
 PATCH=$1
 REPOSITORY=$2
+BRANCH=$3
 clear
 
 if [[ -z $PATCH ]] || [[ -z $REPOSITORY ]];
@@ -9,6 +10,8 @@ then
     exit
 fi
 
+cd $HOME/.patch/${REPOSITORY}
+git checkout $BRANCH -q
 cp $HOME/.patch/patches/${PATCH} $HOME/.patch/${PATCH}
 cd $HOME/.patch
 patch -p0 < ${PATCH}

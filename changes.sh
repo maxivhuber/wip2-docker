@@ -230,5 +230,5 @@ read -p "Clone(c) or update(u) ? [c/u]" -n 1 -r
 getDockerName
 getDockerPath
 patch
-update.sh $PATCH $REPOSITORY
+update.sh $PATCH $REPOSITORY $BRANCH
 exit
