@@ -211,20 +211,6 @@ patch () {
     return 0
 }
 
-advise () {
-    clear
-    printf "Please run following commands to get your changes public:\n"
-    printf "cp $HOME/.patch/patches/${PATCH} $HOME/.patch/${PATCH}\n"
-    printf "cd $HOME/.patch"
-    printf "patch -p0 < ${PATCH}\n"
-    printf "rm $HOME/.patch/${PATCH}\n"
-    printf "cd $HOME/.patch/${REPOSITORY}\n"
-    printf "git add .\n"
-    printf "git commit -m \"${PATCH}\"\n"
-    return 0
-
-}
-
 #commands
 prepare
 getRepoName
@@ -244,5 +230,5 @@ read -p "Clone(c) or update(u) ? [c/u]" -n 1 -r
 getDockerName
 getDockerPath
 patch
-advise
+update.sh $PATCH $REPOSITORY
 exit
