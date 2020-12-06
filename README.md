@@ -1,5 +1,7 @@
 # wip2-docker
  
+Docker Container must be on latest image!
+
 - Open Terminal 
 - cd Downloads
 - wget wget https://github.com/maxivhuber/wip2-docker/archive/v1.2.tar.gz
